@@ -1,48 +1,33 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
 import React from 'react';
 import {
   SafeAreaView,
   ScrollView,
   StatusBar,
-  StyleSheet,
-  Text,
   useColorScheme,
-  View,
 } from 'react-native';
 
 import {
   Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import { LedsButton } from './components/Buttons';
+import { MainScreen } from './src/screens/MainScreen';
 
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: Colors.lighter,
+    height: "100%",
   };
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <StatusBar barStyle={'light-content'} />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
+        contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}
         style={backgroundStyle}>
-        <LedsButton url={"on"} color={"red"} />
+        <MainScreen />
       </ScrollView>
     </SafeAreaView>
   );
