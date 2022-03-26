@@ -1,4 +1,4 @@
-package com.ledsapp;
+package pt.joaoabel.ledsapp;
 
 import com.facebook.react.ReactActivity;
 
