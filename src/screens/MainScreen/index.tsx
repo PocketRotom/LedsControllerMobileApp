@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Text } from 'react-native';
 import { LedsButton } from '../../components/Buttons';
 import { Controller, Row } from './styles';
 
@@ -45,6 +45,7 @@ export const MainScreen: React.FC<Props> = ({}) => {
               <LedsButton url={"blue5"} color={"#E93F7E"} icon={false} label={"B5"} label_color={"black"}/>
               <LedsButton url={"smooth"} color={"grey"} icon={false} label={"Smooth"} label_color={"black"}/>
             </Row>
+            <Text></Text>
         </Controller>
       );
 }
